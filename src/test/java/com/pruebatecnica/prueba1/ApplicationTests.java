@@ -1,13 +1,25 @@
 package com.pruebatecnica.prueba1;
 
 import org.junit.jupiter.api.Test;
-import org.springframework.boot.test.context.SpringBootTest;
+import org.junit.jupiter.api.extension.ExtendWith;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.context.ApplicationContext;
+import org.springframework.test.context.junit.jupiter.SpringExtension;
 
-@SpringBootTest
-class ApplicationTests {
+import static org.junit.jupiter.api.Assertions.assertDoesNotThrow;
+import static org.junit.jupiter.api.Assertions.assertNotNull;
 
+@ExtendWith(SpringExtension.class)
+public class ApplicationTests {
+
+	@Autowired
+	private ApplicationContext applicationContext;
 	@Test
-	void contextLoads() {
+	public void contextLoads() {
+		assertNotNull(applicationContext);
+	}
+	@Test
+	public void entryPointTest(){assertDoesNotThrow(()-> Application.main(new String[]{}));
 	}
 
 }

@@ -16,7 +16,7 @@ import java.util.regex.Pattern;
 public class AlliterationServiceImpl implements AlliterationService {
 
     /**
-     * Calculate alliteration percentange string.
+     * Calculate alliteration percentange.
      *
      * @param requestTest the request test
      * @return the string

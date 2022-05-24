@@ -1,6 +1,6 @@
 package com.pruebatecnica.prueba1.service;
 
-import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.bind.annotation.RequestBody;
 
 /**
  * The interface Alliteration service.
@@ -13,5 +13,5 @@ public interface AlliterationService {
      * @param requestTest the request test
      * @return the string
      */
-    String calculateAlliterationPercentange(@RequestParam String requestTest);
+    String calculateAlliterationPercentange(@RequestBody String requestTest);
 }
