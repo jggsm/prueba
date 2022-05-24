@@ -1,0 +1,62 @@
+{
+	"info": {
+		"_postman_id": "c2ef2342-7bff-4bc0-9f90-c30a8e3703b8",
+		"name": "prueba",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Alliteration Percentage",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"requestTest\":\"Zarvis zanked his ankle at zoga, and zolanda zelled out in surprise.\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/alliterate",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"alliterate"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Data load Balance",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/balance?dataLoad=1,3,4,2,2,2,1,1,2",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"balance"
+					],
+					"query": [
+						{
+							"key": "dataLoad",
+							"value": "1,3,4,2,2,2,1,1,2"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
